@@ -1,4 +1,4 @@
-    {
+{
   "name": "axe-evaluation",
   "version": "1.0.0",
   "description": "",
@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "axe-core": "^4.7.2"
+  },
+  "dependencies": {
+    "puppeteer": "^21.1.1"
+  }
 }
