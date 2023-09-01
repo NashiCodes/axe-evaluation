@@ -1,0 +1,1579 @@
+{
+  "testEngine": { "name": "axe-core", "version": "4.7.2" },
+  "testRunner": { "name": "axe" },
+  "testEnvironment": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/116.0.5845.96 Safari/537.36",
+    "windowWidth": 800,
+    "windowHeight": 600,
+    "orientationAngle": 0,
+    "orientationType": "portrait-primary"
+  },
+  "timestamp": "2023-09-01T20:56:57.208Z",
+  "url": "http://127.0.0.1:5500/index.html",
+  "toolOptions": { "reporter": "v1" },
+  "inapplicable": [
+    {
+      "id": "accesskeys",
+      "impact": null,
+      "tags": ["cat.keyboard", "best-practice"],
+      "description": "Certifique-se de que cada valor do atributo 'acesskey' é único",
+      "help": "O valor do atributo 'accesskey' deve ser único",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/accesskeys?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "area-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT6.a"
+      ],
+      "description": "Certifique-se de que elementos <area> de mapas de imagem tenham um texto alternativo",
+      "help": "Elementos <area> ativos devem ter um texto alternativo",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/area-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-allowed-attr",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que os atributos ARIA são permitidos para a função de um elemento",
+      "help": "Os elementos devem usar apenas atributos ARIA permitidos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-attr?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-allowed-role",
+      "impact": null,
+      "tags": ["cat.aria", "best-practice"],
+      "description": "Certifique-se de que o atributo 'role' tem um valor apropriado para o elemento",
+      "help": "A função ARIA deve ser apropriada para o elemento",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-command-name",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412", "ACT", "TTv5", "TT6.a"],
+      "description": "Certifique-se de que cada botão, link e item de menu ARIA tenha um nome acessível",
+      "help": "Comandos ARIA devem ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-command-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-dialog-name",
+      "impact": null,
+      "tags": ["cat.aria", "best-practice"],
+      "description": "Certifique-se de que cada nó de diálogo e diálogo de alerta ARIA tenha um nome acessível",
+      "help": "Nós de diálogo e diálogo de alerta ARIA devem ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-dialog-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-hidden-body",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que aria-hidden='true' não está presente no elemento <body>.",
+      "help": "aria-hidden='true' não deve estar presente no elemento <body>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-hidden-body?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-hidden-focus",
+      "impact": null,
+      "tags": ["cat.name-role-value", "wcag2a", "wcag412", "TTv5", "TT6.a"],
+      "description": "Certifique-se de que elementos com aria-hidden não contenham elementos focalizáveis",
+      "help": "Elementos ocultados através de ARIA não devem conter elementos focalizáveis",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-hidden-focus?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-input-field-name",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412", "ACT", "TTv5", "TT5.c"],
+      "description": "Certifique-se de que cada campo de entrada ARIA tenha um nome acessível",
+      "help": "Campos de entrada ARIA tenham um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-input-field-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-meter-name",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag111"],
+      "description": "Certifique-se de que cada nó de medição ARIA tenha um nome acessível",
+      "help": "Nós de medição ARIA devem ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-meter-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-progressbar-name",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag111"],
+      "description": "Certifique-se de que cada nó de barra de progresso ARIA tenha um nome acessível",
+      "help": "Nós de barra de progresso ARIA devem ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-progressbar-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-required-attr",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que elementos com funções ARIA tenham todos os atributos ARIA necessários",
+      "help": "Os atributos ARIA necessários devem ser fornecidos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-required-attr?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-required-children",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag131"],
+      "description": "Certifique-se de que elementos com uma função ARIA que requer funções filhas as contenham",
+      "help": "Certas funções ARIA devem conter filhos específicos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-required-children?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag131"],
+      "description": "Certifique-se de que elementos com uma função ARIA que requer funções pais estejam contidas nestas",
+      "help": "Certas funções ARIA devem estar contidas em pais específicos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-required-parent?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-roles",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que todos os elementos com um atributo 'role' utilizem um valor válido",
+      "help": "Os ARIA 'roles' utilizados devem ter valores válidos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-roles?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-text",
+      "impact": null,
+      "tags": ["cat.aria", "best-practice"],
+      "description": "Certifique-se de que \"role=text\" é usado em elementos sem descendentes focalizáveis",
+      "help": "\"role=text\" não deve ter descendentes focalizáveis",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-text?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-toggle-field-name",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412", "ACT", "TTv5", "TT5.c"],
+      "description": "Certifique-se de que cada botão de alternância ARIA tenha um nome acessível",
+      "help": "Botões de alternância ARIA tenham um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-toggle-field-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-tooltip-name",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que cada nó de dica de tela ARIA tenha um nome acessível",
+      "help": "Nós de dica de tela ARIA devem ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-tooltip-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-treeitem-name",
+      "impact": null,
+      "tags": ["cat.aria", "best-practice"],
+      "description": "Certifique-se de que cada nó de 'treeitem' ARIA deve ter um nome acessível",
+      "help": "Nós de 'treeitem' ARIA devem ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-treeitem-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que cada atributo ARIA tenha um valor válido",
+      "help": "Atributos ARIA devem ter valores válidos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-valid-attr-value?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "aria-valid-attr",
+      "impact": null,
+      "tags": ["cat.aria", "wcag2a", "wcag412"],
+      "description": "Certifique-se de que atributos que se iniciem com aria- são atributos ARIA válidos",
+      "help": "Atributos ARIA devem ter nomes válidos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/aria-valid-attr?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "autocomplete-valid",
+      "impact": null,
+      "tags": ["cat.forms", "wcag21aa", "wcag135", "ACT"],
+      "description": "Certifique-se de que o atributo 'autocomplete' esteja correto e adequado para o campo de formulário",
+      "help": "Atributo 'autocomplete' deve ser usado corretamente",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/autocomplete-valid?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "blink",
+      "impact": null,
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag222",
+        "section508",
+        "section508.22.j",
+        "TTv5",
+        "TT2.b"
+      ],
+      "description": "Certifique-se de que elementos <blink> não são utilizados",
+      "help": "Elementos <blink> foram descontinuados e não devem ser utilizados",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/blink?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "button-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT6.a"
+      ],
+      "description": "Certifique-se de que botões tenham texto discernível",
+      "help": "Botões devem ter texto discernível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/button-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "definition-list",
+      "impact": null,
+      "tags": ["cat.structure", "wcag2a", "wcag131"],
+      "description": "Certifique-se de que elementos <dl> estão estruturados corretamente",
+      "help": "Elementos <dl> devem conter diretamente apenas grupos <dt> e <dd> propriamente ordenados, ou elementos <script> ou <template>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/definition-list?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "dlitem",
+      "impact": null,
+      "tags": ["cat.structure", "wcag2a", "wcag131"],
+      "description": "Certifique-se de que elementos <dt> e <dd> estão contidos em um elemento <dl>",
+      "help": "Elementos <dt> e <dd> devem estar contidos em um elemento <dl>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/dlitem?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "document-title",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag242",
+        "ACT",
+        "TTv5",
+        "TT12.a"
+      ],
+      "description": "Certifique-se de que cada documento HTML contenha um elemento <title> não vazio",
+      "help": "Documentos devem ter um elemento <title> para ajudar na navegação",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/document-title?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "duplicate-id-active",
+      "impact": null,
+      "tags": ["cat.parsing", "wcag2a", "wcag411"],
+      "description": "Certifique-se de que cada valor do atributo 'id' de elementos ativos seja único",
+      "help": "IDs de elementos ativos devem ser únicos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id-active?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": null,
+      "tags": ["cat.parsing", "wcag2a", "wcag411"],
+      "description": "Certifique-se de que cada valor do atributo 'id' usado no ARIA e em rótulos seja único",
+      "help": "IDs usados no ARIA e em 'labels' devem ser únicos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id-aria?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "empty-table-header",
+      "impact": null,
+      "tags": ["cat.name-role-value", "best-practice"],
+      "description": "Certifique-se de que cabeçalhos de tabela tenham texto discernível",
+      "help": "O texto do cabeçalho de tabela não deve ser vazio",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/empty-table-header?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "form-field-multiple-labels",
+      "impact": null,
+      "tags": ["cat.forms", "wcag2a", "wcag332", "TTv5", "TT5.c"],
+      "description": "Certifique-se de que campos de formulários não tenham múltiplos elementos 'label'",
+      "help": "Campos de formulário não devem ter múltiplos elementos 'label'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/form-field-multiple-labels?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "frame-focusable-content",
+      "impact": null,
+      "tags": ["cat.keyboard", "wcag2a", "wcag211", "TTv5", "TT4.a"],
+      "description": "Certifique-se de que elementos <frame> e <iframe> com tabindex=-1 não tenham conteúdo focalizável",
+      "help": "Quadros com tabindex=-1 não devem ter conteúdo focalizável",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/frame-focusable-content?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "frame-tested",
+      "impact": null,
+      "tags": ["cat.structure", "review-item", "best-practice"],
+      "description": "Certifique-se de que elementos <iframe> e <frame> contenham o script axe-core",
+      "help": "Os 'frames' devem ser testados com o axe-core",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/frame-tested?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "frame-title-unique",
+      "impact": null,
+      "tags": ["cat.text-alternatives", "wcag412", "wcag2a", "TTv5", "TT12.d"],
+      "description": "Certifique-se de que os elementos <iframe> e <frame> contenham um atributo 'title' único",
+      "help": "Os 'frames' devem ter um atributo 'title' único",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/frame-title-unique?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "frame-title",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.i",
+        "TTv5",
+        "TT12.d"
+      ],
+      "description": "Certifique-se de que os elementos <iframe> e <frame> contenham um atributo 'title' não vazio",
+      "help": "Os 'frames' devem ter um atributo 'title'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/frame-title?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "html-has-lang",
+      "impact": null,
+      "tags": ["cat.language", "wcag2a", "wcag311", "ACT", "TTv5", "TT11.a"],
+      "description": "Certifique-se de que cada documento HTML tenha um atributo 'lang'",
+      "help": "O elemento <html> deve ter um atributo 'lang'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "html-lang-valid",
+      "impact": null,
+      "tags": ["cat.language", "wcag2a", "wcag311", "ACT", "TTv5", "TT11.a"],
+      "description": "Certifique-se de que o atributo 'lang' do elemento <html> tenha um valor válido",
+      "help": "O elemento <html> deve ter um valor válido para o atributo 'lang'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/html-lang-valid?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "html-xml-lang-mismatch",
+      "impact": null,
+      "tags": ["cat.language", "wcag2a", "wcag311", "ACT"],
+      "description": "Certifique-se de que elementos HTML com ambos os atributos 'lang' e 'xml:lang' válidos concordem entre si sobre o idioma base da página",
+      "help": "Elementos HTML com 'lang' e 'xml:lang' devem ter o mesmo idioma base",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/html-xml-lang-mismatch?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "input-button-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT5.c"
+      ],
+      "description": "Certifique-se de que botões tenham um texto discernível",
+      "help": "Botões de controle devem ter um texto discernível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "input-image-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT7.a"
+      ],
+      "description": "Certifique-se de que elementos <input type=\"image\"> tenham um texto alternativo",
+      "help": "Botões de imagem devem ter um texto alternativo",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/input-image-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "label-title-only",
+      "impact": null,
+      "tags": ["cat.forms", "best-practice"],
+      "description": "Certifique-se de que cada elemento de formulário não seja rotulado apenas usando os atributos 'title' ou 'aria-describedby'",
+      "help": "Elementos de formulário devem ter um rótulo visível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/label-title-only?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "label",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "ACT",
+        "TTv5",
+        "TT5.c"
+      ],
+      "description": "Certifique-se de que cada elemento de formulário tenha um rótulo",
+      "help": "Elementos de formulário devem ter rótulos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/label?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-banner-is-top-level",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que a região 'banner' esteja no nível principal",
+      "help": "A região 'banner' não deve estar contida em outra região",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-banner-is-top-level?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-complementary-is-top-level",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que a região 'complementary' ou 'aside' estejam no nível principal",
+      "help": "'Aside' não deve estar contido em outra região",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-complementary-is-top-level?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-contentinfo-is-top-level",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que a região 'contentinfo' esteja no nível principal",
+      "help": "A região 'contentinfo' não deve estar contida em outra região",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-contentinfo-is-top-level?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-main-is-top-level",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que a região 'main' esteja no nível principal",
+      "help": "A região 'main' não deve estar contida em outra região",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-main-is-top-level?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-no-duplicate-banner",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que o documento tenha no máximo uma região 'banner'",
+      "help": "O documento não deve ter mais do que uma região 'banner'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-banner?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-no-duplicate-contentinfo",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que o documento tenha no máximo uma região 'contentinfo'",
+      "help": "O documento não deve ter mais do que uma região 'contentinfo'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-contentinfo?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-no-duplicate-main",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que o documento tenha, no máximo, uma região 'main'",
+      "help": "O documento não deve ter mais de uma região 'main'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-main?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-one-main",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que o documento tenha apenas uma região 'main' e que cada 'iframe' na página tenha no náximo uma região 'main'",
+      "help": "O documento deve ter uma região 'main'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "landmark-unique",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "help": "Certifique-se de que as regiões são únicas",
+      "description": "As regiões devem ter um 'role' ou combinação de 'role'/'label'/'title' (ou seja, um nome acessível) únicos",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": null,
+      "tags": ["cat.color", "wcag2a", "wcag141", "TTv5", "TT13.a"],
+      "description": "Links podem ser distinguidos sem depender da cor",
+      "help": "Links devem ser distinguidos do texto ao redor de uma maneira que não dependa da cor",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/link-in-text-block?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "marquee",
+      "impact": null,
+      "tags": ["cat.parsing", "wcag2a", "wcag222", "TTv5", "TT2.b"],
+      "description": "Certifique-se de que elementos <marquee> não são utilizados",
+      "help": "Elementos <marquee> foram descontinuados e não devem ser utilizados",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/marquee?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "meta-refresh",
+      "impact": null,
+      "tags": ["cat.time-and-media", "wcag2a", "wcag221", "TTv5", "TT8.a"],
+      "description": "Certifique-se de que <meta http-equiv=\"refresh\"> não é utilizado",
+      "help": "Atualização temporizada não deve existir",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/meta-refresh?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "meta-viewport-large",
+      "impact": null,
+      "tags": ["cat.sensory-and-visual-cues", "best-practice"],
+      "description": "Certifique-se de que <meta name=\"viewport\"> permite ampliar de maneira significativa",
+      "help": "Os usuários devem poder dar zoom e ampliar o texto em até 500%",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/meta-viewport-large?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "meta-viewport",
+      "impact": null,
+      "tags": ["cat.sensory-and-visual-cues", "wcag2aa", "wcag144", "ACT"],
+      "description": "Certifique-se de que <meta name=\"viewport\"> não desabilite a ampliação de texto e o zoom",
+      "help": "O zoom e a ampliação de texto não devem ser desabilitados",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/meta-viewport?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "nested-interactive",
+      "impact": null,
+      "tags": ["cat.keyboard", "wcag2a", "wcag412", "TTv5", "TT6.a"],
+      "description": "Controles interativos aninhados não são anunciados por leitores de tela",
+      "help": "Certifique-se de que controles interativos não estejam aninhados",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/nested-interactive?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "object-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a"
+      ],
+      "description": "Certifique-se de que elementos <object> tenham um texto alternativo",
+      "help": "Elementos <object> devem ter um texto alternativo",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/object-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "page-has-heading-one",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que a página, ou pelo menos um dos seus 'frames', contenha um título de primeiro nível",
+      "help": "A página deve conter um título de primeiro nível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/page-has-heading-one?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "region",
+      "impact": null,
+      "tags": ["cat.keyboard", "best-practice"],
+      "description": "Certifique-se de todo o conteúdo da página esteja contido em regiões (landmarks)",
+      "help": "Todo o conteúdo da página deve estar contido em regiões (landmarks)",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/region?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "role-img-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT7.a"
+      ],
+      "description": "Certifique-se de que elementos com [role='img'] tenham texto alternativo",
+      "help": "Elementos com [role='img'] tenham um texto alternativo",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/role-img-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "scope-attr-valid",
+      "impact": null,
+      "tags": ["cat.tables", "best-practice"],
+      "description": "Certifique-se de que o atributo 'scope' é utilizado corretamente em tabelas",
+      "help": "O atributo 'scope' deve ser utilizado corretamente",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/scope-attr-valid?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "scrollable-region-focusable",
+      "impact": null,
+      "tags": ["cat.keyboard", "wcag2a", "wcag211", "TTv5", "TT4.a"],
+      "description": "Elementos que tenham conteúdo rolável devem ser acessíveis via teclado",
+      "help": "Certificar-se de que regiões roláveis tenham acesso via teclado",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/scrollable-region-focusable?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "select-name",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "ACT",
+        "TTv5",
+        "TT5.c"
+      ],
+      "description": "Certifique-se que o elemento 'select' tenha um nome acessível",
+      "help": "O elemento 'select' deve ter um nome acessível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/select-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "server-side-image-map",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag211",
+        "section508",
+        "section508.22.f",
+        "TTv5",
+        "TT4.a"
+      ],
+      "description": "Certifique-se de que mapas de imagem do lado do servidor não são utilizados",
+      "help": "Mapas de imagem do lado do servidor não devem ser utilizados",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/server-side-image-map?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "skip-link",
+      "impact": null,
+      "tags": ["cat.keyboard", "best-practice"],
+      "description": "Certifique-se de que todos os links de escape tenham um destino focalizável",
+      "help": "O destino de um link de escape deve existir e ser focalizável",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/skip-link?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "svg-img-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT7.a"
+      ],
+      "description": "Certifique-se de que elementos svg com um 'role' de 'img', 'graphics-document' ou 'graphics-symbol' tenham um texto acessível",
+      "help": "Elementos svg com um 'role' de 'img' tenham um texto alternativo",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/svg-img-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "tabindex",
+      "impact": null,
+      "tags": ["cat.keyboard", "best-practice"],
+      "description": "Certifique-se de que os valores do atributo 'tabindex' não são maiores do que 0",
+      "help": "Elementos não devem ter um 'tabindex' maior do que zero",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/tabindex?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "table-duplicate-name",
+      "impact": null,
+      "tags": ["cat.tables", "best-practice"],
+      "description": "Certifique-se de que tabelas não tenham 'summary' e <caption> iguais",
+      "help": "O elemento <caption> não deve conter o mesmo texto que o atributo 'summary'",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/table-duplicate-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "td-headers-attr",
+      "impact": null,
+      "tags": [
+        "cat.tables",
+        "wcag2a",
+        "wcag131",
+        "section508",
+        "section508.22.g",
+        "TTv5",
+        "TT14.b"
+      ],
+      "description": "Certifique-se de que cada célula em uma tabela usando o atributo 'headers' se refira a outra célula nesta tabela",
+      "help": "Todas as células em uma tabela que utilizem o atributo 'headers' devem se referir apenas a outras células desta mesma tabela",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/td-headers-attr?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "th-has-data-cells",
+      "impact": null,
+      "tags": [
+        "cat.tables",
+        "wcag2a",
+        "wcag131",
+        "section508",
+        "section508.22.g",
+        "TTv5",
+        "14.b"
+      ],
+      "description": "Certifique-se de cada cabeçalho em uma tabela de dados se refira a células de dados",
+      "help": "Todos os elementos 'th' e elementos com role=columnheader/rowheader devem ter células de dados que eles descrevem",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/th-has-data-cells?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "valid-lang",
+      "impact": null,
+      "tags": ["cat.language", "wcag2aa", "wcag312", "ACT", "TTv5", "TT11.b"],
+      "description": "Certifique-se de que os atributos 'lang' tenham valores válidos",
+      "help": "O atributo 'lang' deve ter um valor válido",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/valid-lang?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "video-caption",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a"
+      ],
+      "description": "Certifique-se de que elementos <video> tenham legendas",
+      "help": "Elementos <video> devem ter legendas",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/video-caption?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    },
+    {
+      "id": "no-autoplay-audio",
+      "impact": null,
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag142",
+        "ACT",
+        "TTv5",
+        "TT2.a"
+      ],
+      "description": "Certifique-se de que elementos <video> ou <audio> não reproduzam áudio automaticamente por mais de 3 segundos sem um mecanismo de controle para parar ou silenciar o áudio",
+      "help": "Elementos <video> ou <audio> não reproduzam áudio automaticamente",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/no-autoplay-audio?application=axe-puppeteer&lang=pt_BR",
+      "nodes": []
+    }
+  ],
+  "passes": [
+    {
+      "id": "avoid-inline-spacing",
+      "impact": null,
+      "tags": ["cat.structure", "wcag21aa", "wcag1412", "ACT"],
+      "description": "Certifique-se de que o espaçamento de texto definido via atributos de estilo pode ser ajustado com folhas de estilo personalizadas",
+      "help": "O espaçamento de texto 'inline' deve ser ajustável com folhas de estilo personalizadas",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/avoid-inline-spacing?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"rrssb-facebook\" style=\"width: calc(100% - 126px);\" data-initwidth=\"33.333333333333336\" data-size=\"68\">",
+          "target": [".rrssb-facebook"]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"rrssb-twitter small\" style=\"width: 42px;\" data-initwidth=\"33.333333333333336\" data-size=\"53\">",
+          "target": [".rrssb-twitter"]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"rrssb-email small\" style=\"width: 42px;\" data-initwidth=\"33.333333333333336\" data-size=\"41\">",
+          "target": [".rrssb-email"]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"https://wpteste2.ufjf.br/testedescricao2\" title=\"Voltar para a página inicial\" style=\"margin-right: 20px\"><i class=\"material-icons teste-i\">home</i></a>",
+          "target": ["a[title=\"Voltar para a página inicial\"]"]
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": null,
+      "tags": ["cat.color", "wcag2aa", "wcag143", "ACT", "TTv5", "TT13.c"],
+      "description": "Certifique-se de que o contraste entre as cores de primeiro plano e de fundo atenda aos limites de relação de contraste WCAG 2 AA",
+      "help": "Os elementos devem ter contraste de cor suficiente",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#252525",
+                "bgColor": "#ffffff",
+                "contrastRatio": 15.32,
+                "fontSize": "26.3pt (35px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento tem contraste suficiente no valor de 15.32"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h1 id=\"post-9\">\n                            <style>li.page_item .children .page_item a,li.page_item .children .page_item .children a{color: #252525 !important;} </style>\n                            Apresentação</h1>",
+          "target": ["#post-9"]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#212121",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.1,
+                "fontSize": "12.6pt (16.8px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento tem contraste suficiente no valor de 16.1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Escreva aqui o texto de apresentação do setor.</p>",
+          "target": ["p"]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#306199",
+                "contrastRatio": 6.37,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento tem contraste suficiente no valor de 6.37"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"rrssb-text\">facebook</span>",
+          "target": [".rrssb-facebook > .popup > .rrssb-text"]
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id",
+      "impact": "minor",
+      "tags": ["cat.parsing", "wcag2a", "wcag411"],
+      "description": "Certifique-se de que cada valor do atributo 'id' seja único",
+      "help": "O valor do atributo 'id' deve ser único",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id",
+              "data": "post-9",
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O documento não tem elementos estáticos que compartilham o mesmo atributo 'id'"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h1 id=\"post-9\">\n                            <style>li.page_item .children .page_item a,li.page_item .children .page_item .children a{color: #252525 !important;} </style>\n                            Apresentação</h1>",
+          "target": ["#post-9"]
+        }
+      ]
+    },
+    {
+      "id": "empty-heading",
+      "impact": null,
+      "tags": ["cat.name-role-value", "best-practice"],
+      "description": "Certifique-se de que os títulos tenham texto discernível",
+      "help": "Os títulos não devem ser vazios",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/empty-heading?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento tem texto que é visível aos leitores de tela"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h1 id=\"post-9\">\n                            <style>li.page_item .children .page_item a,li.page_item .children .page_item .children a{color: #252525 !important;} </style>\n                            Apresentação</h1>",
+          "target": ["#post-9"]
+        }
+      ]
+    },
+    {
+      "id": "heading-order",
+      "impact": null,
+      "tags": ["cat.semantics", "best-practice"],
+      "description": "Certifique-se de que a hierarquia dos níveis de títulos seja semanticamente correta",
+      "help": "Níveis dos títulos devem aumentar de um em um",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "heading-order",
+              "data": {
+                "headingOrder": [
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(2) > div:nth-child(2) > main > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(2) > div > div > h2"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(2) > div:nth-child(2) > main > div:nth-child(3) > div > div > div:nth-child(2) > h1:nth-child(1)"
+                    ],
+                    "level": 1
+                  }
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Hierarquia de títulos válida"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h1 id=\"post-9\">\n                            <style>li.page_item .children .page_item a,li.page_item .children .page_item .children a{color: #252525 !important;} </style>\n                            Apresentação</h1>",
+          "target": ["#post-9"]
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT7.a",
+        "TT7.b"
+      ],
+      "description": "Certifique-se de que elementos <img> tenham texto alternativo ou um 'role' igual a 'none' ou 'presentation'",
+      "help": "Imagens devem ter texto alternativo",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "O elemento tem um atributo 'alt'"
+            },
+            {
+              "id": "presentational-role",
+              "data": { "role": "presentation" },
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "A semântica padrão do elemento foi sobrescrita com role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "O elemento tem um valor válido para o atributo 'alt'"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://www.reliablesoft.net/wp-content/uploads/2019/06/brownies.jpg\" alt=\"\" srcset=\"\">",
+          "target": ["img[srcset=\"\"]"]
+        }
+      ]
+    },
+    {
+      "id": "image-redundant-alt",
+      "impact": null,
+      "tags": ["cat.text-alternatives", "best-practice"],
+      "description": "Certifique-se de que a alternativa de imagem não seja repetida como texto",
+      "help": "O texto alternativo de imagens não deve ser repetido como texto",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/image-redundant-alt?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "duplicate-img-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento não duplica um texto existente no atributo 'alt' do elemento <img>"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://www.reliablesoft.net/wp-content/uploads/2019/06/brownies.jpg\" alt=\"\" srcset=\"\">",
+          "target": ["img[srcset=\"\"]"]
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "wcag244",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT6.a"
+      ],
+      "description": "Certifique-se de que links tenham um texto discernível",
+      "help": "Links devem ter um texto discernível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento tem texto que é visível aos leitores de tela"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento não está na ordem de tabulação ou tem texto acessível"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://wpteste2.ufjf.br/testedescricao2/apresentacao/\" class=\"popup\">",
+          "target": [".rrssb-facebook > .popup"]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento tem texto que é visível aos leitores de tela"
+            },
+            {
+              "id": "non-empty-title",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento tem um atributo 'title'"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento não está na ordem de tabulação ou tem texto acessível"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"#\" title=\"ir para o topo da página \"><i class=\"material-icons teste-i\">arrow_upward</i></a>",
+          "target": ["a[title=\"ir para o topo da página \"]"]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento tem texto que é visível aos leitores de tela"
+            },
+            {
+              "id": "non-empty-title",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento tem um atributo 'title'"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento não está na ordem de tabulação ou tem texto acessível"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"https://wpteste2.ufjf.br/testedescricao2\" title=\"Voltar para a página inicial\" style=\"margin-right: 20px\"><i class=\"material-icons teste-i\">home</i></a>",
+          "target": ["a[title=\"Voltar para a página inicial\"]"]
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "impact": null,
+      "tags": ["cat.structure", "wcag2a", "wcag131"],
+      "description": "Certifique-se de que listas sejam estruturadas corretamente",
+      "help": "Elementos <ul> e <ol> devem conter diretamente apenas elementos <li>, <script> ou <template>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/list?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "only-listitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento de lista tem somente filhos diretos que são permitidos dentro de elementos <li>"
+            }
+          ],
+          "impact": null,
+          "html": "<ul class=\"rrssb-buttons clearfix rrssb-1\">",
+          "target": [".rrssb-buttons"]
+        }
+      ]
+    },
+    {
+      "id": "listitem",
+      "impact": null,
+      "tags": ["cat.structure", "wcag2a", "wcag131"],
+      "description": "Certifique-se de que elementos <li> são usados semanticamente",
+      "help": "Elementos <li> devem estar contidos em um <ul> ou <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/listitem?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "listitem",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O item de lista tem um elemento pai <ul>, <ol> ou role=\"list\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"rrssb-facebook\" style=\"width: calc(100% - 126px);\" data-initwidth=\"33.333333333333336\" data-size=\"68\">",
+          "target": [".rrssb-facebook"]
+        },
+        {
+          "any": [
+            {
+              "id": "listitem",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O item de lista tem um elemento pai <ul>, <ol> ou role=\"list\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"rrssb-twitter small\" style=\"width: 42px;\" data-initwidth=\"33.333333333333336\" data-size=\"53\">",
+          "target": [".rrssb-twitter"]
+        },
+        {
+          "any": [
+            {
+              "id": "listitem",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O item de lista tem um elemento pai <ul>, <ol> ou role=\"list\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"rrssb-email small\" style=\"width: 42px;\" data-initwidth=\"33.333333333333336\" data-size=\"41\">",
+          "target": [".rrssb-email"]
+        }
+      ]
+    },
+    {
+      "id": "presentation-role-conflict",
+      "impact": null,
+      "tags": ["cat.aria", "best-practice", "ACT"],
+      "description": "Sinaliza elementos cuja função é 'none' ou 'presentation', e que causam o acionamento da resolução de conflito de funções.",
+      "help": "Elementos com função 'none' ou 'presentation' devem ser sinalizados",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/presentation-role-conflict?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "is-element-focusable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento é focalizável."
+            },
+            {
+              "id": "has-global-aria-attribute",
+              "data": [],
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento tem atributos ARIA globais: "
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://www.reliablesoft.net/wp-content/uploads/2019/06/brownies.jpg\" alt=\"\" srcset=\"\">",
+          "target": ["img[srcset=\"\"]"]
+        }
+      ]
+    }
+  ],
+  "incomplete": [],
+  "violations": [
+    {
+      "id": "duplicate-id",
+      "impact": "minor",
+      "tags": ["cat.parsing", "wcag2a", "wcag411"],
+      "description": "Certifique-se de que cada valor do atributo 'id' seja único",
+      "help": "O valor do atributo 'id' deve ser único",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id",
+              "data": "Layer_1",
+              "relatedNodes": [
+                {
+                  "html": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"28px\" height=\"28px\" viewBox=\"0 0 28 28\" enable-background=\"new 0 0 28 28\" xml:space=\"preserve\">",
+                  "target": [
+                    ".rrssb-twitter > .popup > .rrssb-icon > svg[version=\"1.1\"][x=\"0px\"][y=\"0px\"]"
+                  ]
+                }
+              ],
+              "impact": "minor",
+              "message": "O documento tem múltiplos elementos estáticos com o mesmo atributo 'id'"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "minor",
+          "html": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"28px\" height=\"28px\" viewBox=\"0 0 28 28\" enable-background=\"new 0 0 28 28\" xml:space=\"preserve\">",
+          "target": [
+            ".rrssb-facebook > .popup > .rrssb-icon > svg[version=\"1.1\"][x=\"0px\"][y=\"0px\"]"
+          ],
+          "failureSummary": "Corrija qualquer um dos itens a seguir:\n  O documento tem múltiplos elementos estáticos com o mesmo atributo 'id'"
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "wcag244",
+        "section508",
+        "section508.22.a",
+        "ACT",
+        "TTv5",
+        "TT6.a"
+      ],
+      "description": "Certifique-se de que links tenham um texto discernível",
+      "help": "Links devem ter um texto discernível",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axe-puppeteer&lang=pt_BR",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento não tem texto que seja visível aos leitores de tela"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O atributo 'aria-label' não existe ou está vazio"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios"
+            },
+            {
+              "id": "non-empty-title",
+              "data": { "messageKey": "noAttr" },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento não tem um atributo 'title'"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento está na ordem de tabulação e não tem nome acessível"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"http://twitter.com/home?status=Apresentação https://wpteste2.ufjf.br/testedescricao2/apresentacao/\" class=\"popup\">",
+          "target": [".rrssb-twitter > .popup"],
+          "failureSummary": "Corrija todos os itens a seguir:\n  O elemento está na ordem de tabulação e não tem nome acessível\n\nCorrija qualquer um dos itens a seguir:\n  O elemento não tem texto que seja visível aos leitores de tela\n  O atributo 'aria-label' não existe ou está vazio\n  O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios\n  O elemento não tem um atributo 'title'"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "O elemento não tem texto que seja visível aos leitores de tela"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O atributo 'aria-label' não existe ou está vazio"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios"
+            },
+            {
+              "id": "non-empty-title",
+              "data": { "messageKey": "noAttr" },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento não tem um atributo 'title'"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "O elemento está na ordem de tabulação e não tem nome acessível"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"mailto:?Subject=Apresentação&amp;body=https://wpteste2.ufjf.br/testedescricao2/apresentacao/\" class=\"popup\">",
+          "target": [".rrssb-email > .popup"],
+          "failureSummary": "Corrija todos os itens a seguir:\n  O elemento está na ordem de tabulação e não tem nome acessível\n\nCorrija qualquer um dos itens a seguir:\n  O elemento não tem texto que seja visível aos leitores de tela\n  O atributo 'aria-label' não existe ou está vazio\n  O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios\n  O elemento não tem um atributo 'title'"
+        }
+      ]
+    }
+  ]
+}
