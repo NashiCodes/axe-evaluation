@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer");
 const { AxePuppeteer } = require("@axe-core/puppeteer");
 const fs = require("fs");
-const { dir } = require("console");
 
 (async () => {
   const raw_translate = fs.readFileSync(
