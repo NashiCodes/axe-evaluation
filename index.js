@@ -3,48 +3,98 @@ const { AxePuppeteer } = require("@axe-core/puppeteer");
 const fs = require("fs");
 
 (async () => {
-  const raw_translate = fs.readFileSync(
-    "./node_modules/axe-core/locales/pt_BR.json"
-  );
-  const translate = JSON.parse(raw_translate);
+	const urlsResponse = await fetch("https://wpteste2.ufjf.br/wp-json/acessibilidade/v1/pages_posts");
+	const sitesUrls = await urlsResponse.json();
+	for ( const site of sitesUrls ) {
 
-  //The URL of the page to be evaluated
-  let url = "";
+		if ( site.id !== "31" ) continue;
+		let browser;
+		let page;
+		try {
+			browser = await puppeteer.launch({
+				                                 headless: false,
+				                                 args: ['--disable-gpu', '--disable-dev-shm-usage', '--disable-setuid-sandbox', '--no-sandbox', '--disable-web-security', '--disable-features=IsolateOrigins', '--disable-site-isolation-trials', '--disable-features=BlockInsecurePrivateNetworkRequests'],
+				                                 devtools: true,
+				                                 defaultViewport: { hasTouch: true, isMobile: true, height: 1080, width: 1920 },
+			                                 });
+			page = await browser.newPage();
+			await page.setBypassCSP(true);
 
-  let browser;
-  let page;
-  try {
-    browser = await puppeteer.launch({ headless: true });
-    page = await browser.newPage();
-    await page.goto(url);
+		} catch ( e ) {
+			console.log(e);
+			await browser.close();
+			break;
+		}
 
-    const config = {
-      locale: translate,
-    };
+		const rawTranslate = fs.readFileSync("./node_modules/axe-core/locales/pt_BR.json");
+		const translate = JSON.parse(rawTranslate);
 
-    const results = await new AxePuppeteer(page).configure(config).analyze();
+		const results = {};
 
-    const dir = "/results/".concat(urlToFoldes(results.url));
+		for ( const url of site.urls ) {
+			try {
+				await page.setDefaultNavigationTimeout(0);
+				await page.goto(url);
+				const config = {
+					locale: translate,
+				};
 
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
-    }
+				let result = await new AxePuppeteer(page).configure(config).analyze();
+				console.log("Url analisada: ", result.url)
 
-    console.log(results);
+				console.log("Resultados:");
+				result = reportCleaner(result);
 
-    fs.writeFileSync(url.concat("result.json"), JSON.stringify(results));
-  } catch (err) {
-    console.log(err);
-  }
-  await page.close();
-  await browser.close();
+				results[result.url] = result;
+			} catch ( err ) {
+				console.log(err);
+				await page.close();
+				await browser.close();
+				break;
+			}
+		}
+
+		if ( !fs.existsSync("./reports") ) fs.mkdirSync("./reports");
+
+		fs.writeFileSync("./reports/".concat(site.id.concat("-emag.json")), JSON.stringify(results));
+
+		await browser.close();
+	}
 })();
 
-function urlToFoldes(url) {
-  url = url.replace(/(^\w+:|^)\/\//, "");
-  url = url.replace(/\./g, "_");
-  url = url.split("/");
-  if (url[url.length - 1] === "") url.pop();
-  url = url.join("/");
-  return url;
+function reportCleaner(report) {
+	let newReport = {};
+	newReport.url = report.url;
+	newReport.violations = report.violations;
+	newReport.passes = report.passes;
+	newReport.incomplete = report.incomplete;
+	newReport.inapplicable = report.inapplicable;
+	newReport.date = creationDate();
+	newReport.incomplete.push(getImgAlt(newReport.passes));
+
+	return report;
+}
+
+function creationDate() {
+	const date = new Date();
+	const day = date.getDate();
+	const month = date.getMonth() + 1;
+	const year = date.getFullYear();
+	const hours = date.getHours();
+	const minutes = date.getMinutes();
+	const seconds = date.getSeconds();
+	return day + "/" + month + "/" + year + " " + hours + ":" + minutes + ":" + seconds;
+}
+
+function getImgAlt(passes) {
+	let incomplete = {};
+	try {
+		incomplete = passes.filter(pass => pass.id === "image-alt");
+	} catch ( e ) {
+		console.log(e);
+	}
+	console.log(incomplete)
+
+
+	return incomplete;
 }
