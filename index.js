@@ -33,13 +33,15 @@ const fs = require("fs");
 
 		for ( const url of site.urls ) {
 			try {
-				await page.setDefaultNavigationTimeout(0);
+				page.setDefaultNavigationTimeout(0);
 				await page.goto(url);
 				const config = {
 					locale: translate,
 				};
 
-				let result = await new AxePuppeteer(page).configure(config).analyze();
+				let result = await new AxePuppeteer(page)
+					.include(".wp_innerpage_header")
+					.configure(config).analyze();
 				console.log("Url analisada: ", result.url)
 
 				console.log("Resultados:");
@@ -70,9 +72,11 @@ function reportCleaner(report) {
 	newReport.incomplete = report.incomplete;
 	newReport.inapplicable = report.inapplicable;
 	newReport.date = creationDate();
-	newReport.incomplete.push(getImgAlt(newReport.passes));
+	const imgAlt = getImgAlt(newReport.passes);
+	if ( imgAlt )
+	newReport.incomplete.push(imgAlt);
 
-	return report;
+	return newReport;
 }
 
 function creationDate() {
@@ -87,14 +91,6 @@ function creationDate() {
 }
 
 function getImgAlt(passes) {
-	let incomplete = {};
-	try {
-		incomplete = passes.filter(pass => pass.id === "image-alt");
-	} catch ( e ) {
-		console.log(e);
-	}
-	console.log(incomplete)
-
-
-	return incomplete;
+	const incomplete = passes.filter(pass => pass.id === "image-alt");
+	return incomplete[0];
 }
