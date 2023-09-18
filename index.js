@@ -73,8 +73,7 @@ function reportCleaner(report) {
 	newReport.inapplicable = report.inapplicable;
 	newReport.date = creationDate();
 	const imgAlt = getImgAlt(newReport.passes);
-	if ( imgAlt )
-	newReport.incomplete.push(imgAlt);
+	if ( imgAlt ) newReport.incomplete.push(imgAlt);
 
 	return newReport;
 }
