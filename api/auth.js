@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
 
-const PRIVATE_KEY = "1010FF";
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const user = {
-  name: "CGCO",
-  email: "web.cgco@ufjf.br",
+  name: process.env.USER_NAME,
+  email: process.env.USER_EMAIL,
 };
 
 function tokenValited(req, res, next) {

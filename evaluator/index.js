@@ -8,6 +8,7 @@ require("dotenv").config();
  */
 (async () => {
 
+
     // Busca todas urls dos sites cadastrados
     const urlsResponse = await fetch("https://wpteste2.ufjf.br/wp-json/acessibilidade/v1/pages_posts");
     const sitesUrls = await urlsResponse.json();
@@ -82,14 +83,14 @@ require("dotenv").config();
             } catch (err) {
                 console.log("Erro ao analisar: " + url);
                 // Caso ocorra algum erro, cria um arquivo de log de erros contendo a url a data e o erro, mantendo os anteriores
-                if (!fs.existsSync("./api/errors_logs")) fs.mkdirSync("./api/errors_logs");
-                fs.appendFileSync("./api/errors_logs/site-".concat(site.id.concat(".log")), url.concat(" - ").concat(creationDate()).concat(" - \n").concat(err).concat("\n\n"));
+                if (!fs.existsSync("./errors_logs")) fs.mkdirSync("./errors_logs");
+                fs.appendFileSync("./errors_logs/site-".concat(site.id.concat(".log")), url.concat(" - ").concat(creationDate()).concat(" - \n").concat(err).concat("\n\n"));
             }
         }
 
-        if (!fs.existsSync("./api/reports")) fs.mkdirSync("./api/reports");
+        if (!fs.existsSync("./reports")) fs.mkdirSync("./reports");
 
-        fs.writeFileSync("./api/reports/".concat(site.id.concat("-emag.json")), JSON.stringify(results));
+        fs.writeFileSync("./reports/".concat(site.id.concat("-emag.json")), JSON.stringify(results));
 
         await browser.close();
     }

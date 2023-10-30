@@ -57,3 +57,7 @@ app.get("/getOne/:id", (req, res) => {
         }
     }
 });
+
+const teste = {message: "Hello World"};
+
+module.exports = {teste};
