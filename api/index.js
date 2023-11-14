@@ -40,7 +40,7 @@ app.use("*", tokenValited);
 app.get("/getOne/:id", (req, res) => {
     try {
         const id = req.params.id;
-        const rawdata = fs.readFileSync("./reports/".concat(id.concat("-emag.json")));
+        const rawdata = fs.readFileSync("./api/reports/".concat(id.concat("-emag.json")));
         const report = JSON.parse(rawdata);
         res.statusCode = 200;
         res.json(report);
